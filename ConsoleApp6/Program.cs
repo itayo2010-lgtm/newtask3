@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,16 +21,18 @@ namespace ConsoleApp6
             {
                 Console.WriteLine("enter a new number");
                 newnum = int.Parse(Console.ReadLine());
-                if (newnum == 0)
-                    break;
-                if (num % 2 == 0)
+                if (newnum != 0)
                 {
-                    output += newnum + " " + newnum + " ";
-                }
-                else
-                {
-                    output += newnum + " ";
-                }
+                    if (num % 2 == 0)
+                    {
+                        output += newnum + " " + newnum + " ";
+                    }
+                    else
+                    {
+                        output += newnum + " ";
+                    }
+                }   while (newnum != 0);
+               
             } while (newnum != 0);
             Console.WriteLine(output);
         }
